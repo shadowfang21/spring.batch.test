@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 import com.sf.batch.test.dao.FormPostDao;
 import com.sf.batch.test.dao.FormReplyDao;
 import com.sf.batch.test.entity.FormPostEntity;
-import com.sf.batch.test.entity.FormReplyEntity;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -67,10 +66,10 @@ public class FlowDecisionJobConfig {
                     p.setMessage("123");
                     postDao.save(p);
                     
-                    FormReplyEntity r = new FormReplyEntity();
-                    r.setFormPost(p);
-                    r.setReplyId(1);
-                    dao.save(r);
+//                    FormReplyEntity r = new FormReplyEntity();
+//                    r.setFormPost(p);
+//                    r.setReplyId(1);
+//                    dao.save(r);
                     
                     dao.findAll().forEach(b -> log.info("{}", b.toString()));
                     

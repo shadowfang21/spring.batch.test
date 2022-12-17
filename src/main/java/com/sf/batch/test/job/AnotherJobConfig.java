@@ -2,7 +2,6 @@ package com.sf.batch.test.job;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 import javax.persistence.EntityManagerFactory;
 
@@ -61,26 +60,26 @@ public class AnotherJobConfig {
                     p.setMessage("123");
                     postDao.save(p);
                     
-                    Optional.of(new FormReplyEntity())
-                        .ifPresent(r -> {
-                            r.setFormPost(p);
-                            r.setReplyId(1);
-                            dao.save(r);
-                        });
-                    
-                    Optional.of(new FormReplyEntity())
-                        .ifPresent(r -> {
-                            r.setFormPost(p);
-                            r.setReplyId(2);
-                            dao.save(r);
-                        });
-                    
-                    Optional.of(new FormReplyEntity())
-                        .ifPresent(r -> {
-                            r.setFormPost(p);
-                            r.setReplyId(3);
-                            dao.save(r);
-                        });
+//                    Optional.of(new FormReplyEntity())
+//                        .ifPresent(r -> {
+//                            r.setFormPost(p);
+//                            r.setReplyId(1);
+//                            dao.save(r);
+//                        });
+//                    
+//                    Optional.of(new FormReplyEntity())
+//                        .ifPresent(r -> {
+//                            r.setFormPost(p);
+//                            r.setReplyId(2);
+//                            dao.save(r);
+//                        });
+//                    
+//                    Optional.of(new FormReplyEntity())
+//                        .ifPresent(r -> {
+//                            r.setFormPost(p);
+//                            r.setReplyId(3);
+//                            dao.save(r);
+//                        });
                     
                     dao.findAll().forEach(b -> log.info("{}", b.toString()));
                     

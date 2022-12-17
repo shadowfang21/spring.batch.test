@@ -1,8 +1,13 @@
 package com.sf.batch.test.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -19,4 +24,7 @@ public class FormPostEntity {
     
     @Column(name="MESSAGE")
     private String message;
+    
+    @OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, mappedBy = "formPost")
+    private List<FormReplyEntity> replies;
 }
