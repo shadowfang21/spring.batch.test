@@ -11,7 +11,6 @@ import org.springframework.batch.item.database.JpaPagingItemReader;
 import org.springframework.batch.item.database.builder.JpaPagingItemReaderBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import com.sf.batch.test.entity.FormReplyEntity;
 import com.sf.batch.test.job.parameter.EloanJobParameter;
@@ -19,7 +18,7 @@ import com.sf.batch.test.job.parameter.EloanJobParameter;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Configuration
+//@Configuration
 public class JobParamterTestJobConfig {
 
     @Autowired

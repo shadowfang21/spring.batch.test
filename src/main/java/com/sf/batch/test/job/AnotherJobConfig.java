@@ -15,7 +15,6 @@ import org.springframework.batch.item.database.builder.JpaPagingItemReaderBuilde
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import com.sf.batch.test.dao.FormPostDao;
 import com.sf.batch.test.dao.FormReplyDao;
@@ -25,7 +24,7 @@ import com.sf.batch.test.entity.FormReplyEntity;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Configuration
+//@Configuration
 public class AnotherJobConfig {
     @Autowired
     protected JobBuilderFactory jobBuilderFactory;
